@@ -1,0 +1,36 @@
+<div class="container py-5">
+  <form class="example-form jumbotron" [formGroup]="pollForm">
+
+    <div class="form-group primary-border-focus">
+      <label class="h3">Add Question Here</label>
+      <textarea class="form-control" rows="2" formControlName="question" value="" maxlength="50"></textarea>
+    </div>
+
+    <div class="container" formArrayName="option">
+
+      <div class="form-group" [formGroupName]="i" *ngFor="let group of optionArray.controls; let i = index">
+
+        <td>
+          <input class="form-control mb-1 w-75" placeholder="Add Option" value="" formControlName="choice" />
+        </td>
+
+        <td>
+          <button *ngIf="i > 1" class="btn btn-danger  mb-1" (click)="removeOption(i)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </td>
+      </div>
+
+    </div>
+
+    <div class="form-row org-desc-parent-margin">
+      <button class="btn btn-primary" (click)="addOption()">
+        Add Fields +
+      </button>
+    </div>
+
+  </form>
+
+  <h2>Form Values</h2>
+  <pre>{{  pollForm.value  | json }}</pre>
+</div>
