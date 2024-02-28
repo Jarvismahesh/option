@@ -1,0 +1,31 @@
+input[type=radio] {
+    width: 3%;
+    height: 1.4em;
+    left: -10px;
+    top: 4px;
+}
+#delete
+{
+    padding: 0;
+    border: none;
+    background: none;
+}
+i
+{
+    color: red;
+    margin-top: 9px;
+}
+.col-9
+{
+    margin-left: -40px;
+}
+#addbutton
+{
+    background-color: white;
+    margin-left: 37px;
+}
+.container
+{
+    margin-top: -10px;
+    /* margin-bottom: -30px; */
+}
